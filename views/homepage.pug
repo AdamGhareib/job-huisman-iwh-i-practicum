@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title= title
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+
+    div(class="container")
+      h1 Footballers overview
+
+      p(class="intro-text") This is an overview of the custom object Footballers. You can add a new footballer by clicking the button below.
+
+      if footballers.length > 0 
+        table(class="footballers-table")
+          thead
+            tr
+              th Name
+              th Primary foot
+              th Position
+          tbody
+            each footballer in footballers
+              tr
+                td= footballer.properties.name
+                td= footballer.properties.primary_foot
+                td= footballer.properties.position
+
+        a(href="/update-cobj" class="button") Add footballer
