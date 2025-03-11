@@ -1,0 +1,29 @@
+doctype html
+html
+  head
+    title= `${title}`
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+  body
+
+  div(class="container")
+    h1 Add footballer
+    
+
+      div(class="error")
+        p= error
+
+    form(action="/update-cobj" method="POST")
+      div
+        label(for="name") Name
+        input(type="text" id="name" name="name" required)
+      div
+        label(for="primary_foot") Primary foot
+        input(type="text" id="primary_foot" name="primary_foot" required)
+      div
+        label(for="position") Position
+        input(type="text" id="position" name="position" required)
+      div
+        input(type="submit" value="Add" class="button")
+
+    a(href="/" class="link") Return to the homepage
