@@ -1,58 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
-body, * {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+:root {
+  --border-radius: 8px;
+  --primary-color: #368f8b;
+  --hover-color: #246a73;
+  --error-color: #df3b57;
+}
+
+body,
+* {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-    margin: 1rem;
+  text-align: center;
 }
 
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+.intro-text {
+  margin-top: 20px;
 }
 
-.card {
-    flex-basis: 31%;
-    margin: 1rem 0.4rem;
-    padding: 1rem 0.4rem 2.5rem 0.4rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 500px;
+  margin-top: 50px;
 }
 
-.card__email {
-    font-size: 1rem;
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
 }
 
-.form-wrapper {
-    font-size: 18px;
-    max-width: 768px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+form > div {
+  display: flex;
+  flex-direction: column;
 }
 
-label, input {
-    margin-top: 5px;
-    display: block;
-    font-size: inherit;
+form label {
+  width: fit-content;
+  margin-bottom: 8px;
 }
 
 input[type="text"] {
-    padding: .25rem;
+  border-radius: var(--border-radius);
+  border: solid 1px black;
+  padding: 8px 16px;
 }
 
-input[type="submit"] {
-    background-color: lightgrey;
-    border: none;
-    padding: .375rem 1rem;
-    margin-top: 10px;
+.button {
+  background-color: var(--primary-color);
+  display: block;
+  text-align: center;
+  outline: none;
+  border: none;
+  padding: 16px;
+  border-radius: var(--border-radius);
+  color: white;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: var(--hover-color);
+}
+
+.link {
+  display: block;
+  margin-top: 20px;
+  color: var(--primary-color);
+  width: fit-content;
+}
+
+.link:hover {
+  color: var(--hover-color);
+}
+
+.error {
+  color: var(--error-color);
+  font-size: 16px;
+  margin-top: 16px;
+}
+
+.footballers-table {
+  margin-block: 30px;
+  width: 100%;
+}
+
+thead {
+  background-color: #bed8d4;
+  color: black;
+  font-weight: 400;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+thead th {
+  padding: 4px 8px;
+  border: solid 1px black;
+}
+
+td {
+  border: solid 1px black;
+  padding: 4px 8px;
+}
+
+tr td:first-of-type {
+  width: 40%;
+}
+
+tr td:nth-of-type(2) {
+  width: 30%;
+}
+
+tr td:nth-of-type(3) {
+  width: 30%;
 }
